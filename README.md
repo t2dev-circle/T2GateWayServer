@@ -15,17 +15,19 @@
 #### 安装教程
 以下以Linux为例：
 
-1.  安装Tars开发环境，可以参考官网（https://doc.tarsyun.com），如果只是本地开发和部署，不依赖于Tars框架，可以只编译按照TarsCpp。
+1.  安装Tars开发环境，可以参考官网（https://doc.tarsyun.com），如果只是本地开发和部署，不依赖于Tars框架，可以只编译安装TarsCpp。
 2.  下载源代码，然后在src同级目录新建build目录，然后执行cmake编译：
 cd build
 cmake ..
 make
 3.  在build下的bin目录即可看到可执行程序，然后拷贝config下的文件到bin目录，修改配置文件，如IP和端口等。其中T2GateWayServer.config.conf是通讯相关配置，T2GateWayServer.conf是业务配置。
-4.  在bin目录新建t2sdk目录，增加授权文件，文件名需要与配置文件T2GateWayServer.conf中的保持一张。
+4.  在bin目录新建t2sdk目录，增加授权文件，文件名需要与配置文件T2GateWayServer.conf中的保持一致。
+5.  本地启动执行如下命令：
+./T2GateWayServer --config=T2GateWayServer.config.conf
 
 #### 使用说明
 
-1.  T2SDK需要找官方授权，包括账号申请；
+1.  T2SDK需要找官方授权（https://ufx.hs.net/#/index），包括账号申请；
 2.  可以不依赖Tars微服务平台，单机本地启动服务（当然也支持在平台发布）
 3.  鉴于测试账号，测试环境，开发周期等条件有限，并未完整验证业务，上线前请务必严格测试验证
 
@@ -34,3 +36,4 @@ make
 特别感谢以下开源项目：
 1.  TarsCpp：https://github.com/TarsCloud/TarsCpp
 2.  concurrentqueue：https://github.com/cameron314/concurrentqueue
+
